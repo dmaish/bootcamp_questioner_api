@@ -1,3 +1,5 @@
-registerUser = (res, req) => {
-    res.send('hello sir');
+export default class AuthController {
+static  registerUser(req, res) {
+    console.log("request object ++++", req.body);
+}
 }

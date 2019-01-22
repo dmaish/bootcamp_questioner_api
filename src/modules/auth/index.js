@@ -1,13 +1,10 @@
 import express from 'express';
 import AuthController from './AuthController';
 
-express = express();
+const authRouter = express.Router();
 
-authRouter = express.Router();
-
-authRouter.get('api/v1/register', () => {
-    // insert middleware here
-    AuthController.registerUser();
-});
+authRouter.post('/api/v1/register', 
+    AuthController.registerUser
+);
 
 export default authRouter;

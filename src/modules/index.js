@@ -3,6 +3,8 @@ import authRouter from './auth';
 
 const apiPrefix = '/api/v1';
 
-app.use(apiPrefix, authRouter);
+const allRoutes = (app) => {
+    app.use(apiPrefix, authRouter);
+}
 
-export default app;
+export default allRoutes;
